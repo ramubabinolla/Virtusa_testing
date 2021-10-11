@@ -1,0 +1,36 @@
+<div class="container">
+    <h1 class="title">Add Course</h1>
+    <div class="divider"></div>
+    <form class="form" (ngSubmit)="onSubmit(f.value)" #f="ngForm">
+        <div class="form-group">
+            <label for="courseTitle">Course Title:</label>
+            <input type="text" class="form-control" name="courseTitle" id="courseTitle" placeholder="Enter Course Name" ngModel>
+        </div>
+        <div class="form-group">
+            <label for="duration">Duration:</label>
+            <input type="text" class="form-control" name="duration" id="duration" placeholder="Enter Duration" ngModel>
+        </div>
+        <div class="checkboxGroup">
+            <label><input type="checkbox" name="isTheory" ngModel> Theoretical</label>
+            <label><input type="checkbox" name="isHandsOn" ngModel> Hands-on Lab</label>
+        </div>
+        <div class="form-group">
+            <label for="hoursPerDay">Hours Per Day:</label>
+            <input type="number" class="form-control" name="hoursPerDay" id="hoursPerDay"
+                placeholder="Enter Hours Per Day" ngModel>
+        </div>
+        <div class="form-group">
+            <label for="techStack">Tech Stack:</label>
+            <textarea  class="form-control" name="techStack" id="techStack" 
+            placeholder="Enter tech stack..." ngModel></textarea>
+        </div>
+        <div class="form-group">
+            <label for="preRequisites">Pre-requisites:</label>
+            <input type="text" class="form-control" name="preRequisites" id="preRequisites"
+                placeholder="Enter Pre-requisites" ngModel>
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary">Add Course</button>
+        </div>
+    </form>
+</div>
